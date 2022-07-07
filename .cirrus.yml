@@ -9,6 +9,6 @@ task:
       - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
       - pkg install -y graphics/gpu-firmware-kmod
     build_package_script:
-      - env BATCH=1 PACKAGES=`pwd` make -C graphics/drm-510-kmod package
+      - cd /usr/ports ; env BATCH=1 make -C graphics/drm-510-kmod package
     binary_artifacts:
-      path: "./*/*.pkg"
+      path: "/usr/ports/graphics/drm-510-kmod/work/pkg/*"
