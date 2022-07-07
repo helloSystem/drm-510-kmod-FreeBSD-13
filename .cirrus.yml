@@ -21,7 +21,8 @@ task:
       - ( cd /usr/ports ; git sparse-checkout set Keywords Mk Templates Tools graphics ; cd - )
       
     build_package_script:
-      - cd /usr/ports ; env BATCH=1 make -C graphics/drm-510-kmod package
+      - ( cd /usr/ports ; env BATCH=1 make -C graphics/drm-510-kmod package ; cd - )
+      - cp -r /usr/ports/graphics/drm-510-kmod/work/pkg . # binary_artifacts needs the files relative to /tmp/cirrus-ci-build
       
     binary_artifacts:
-      path: "../../usr/ports/graphics/drm-510-kmod/work/pkg/*"
+      path: "pkg/*"
