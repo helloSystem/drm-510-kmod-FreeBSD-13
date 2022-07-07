@@ -2,6 +2,9 @@ task:
     freebsd_instance:
       matrix:
         - image: freebsd-13-1-release-amd64
+    env:
+      CIRRUS_CLONE_DEPTH: 1
+      GITHUB_TOKEN: ENCRYPTED[02e03fdb075b334413c7bf1d38bce7f31ff19319bd163e0a3509a8ebe90dea8f3339571a87c69b8355d3bb8d796a632a]
 
     timeout_in: 90m
     prerequisites_script:
