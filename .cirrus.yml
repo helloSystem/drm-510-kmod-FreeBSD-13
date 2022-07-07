@@ -3,12 +3,12 @@ task:
       matrix:
         - image: freebsd-132-1-release-amd64
 
-  timeout_in: 90m
-  prerequisites_script:
-    # portsnap  --interactive fetch && portsnap extract
-    - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
-    - pkg install -y graphics/gpu-firmware-kmod
-  build_package_script:
-    - env BATCH=1 PACKAGES=`pwd` make -C graphics/drm-510-kmod package
-  binary_artifacts:
-    path: "./*/*.pkg"
+    timeout_in: 90m
+    prerequisites_script:
+      # portsnap  --interactive fetch && portsnap extract
+      - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
+      - pkg install -y graphics/gpu-firmware-kmod
+    build_package_script:
+      - env BATCH=1 PACKAGES=`pwd` make -C graphics/drm-510-kmod package
+    binary_artifacts:
+      path: "./*/*.pkg"
