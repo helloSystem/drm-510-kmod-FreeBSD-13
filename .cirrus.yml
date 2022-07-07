@@ -5,7 +5,10 @@ task:
 
     timeout_in: 90m
     prerequisites_script:
-      - portsnap  --interactive fetch && portsnap extract
+      # portsnap  --interactive fetch && portsnap extract
+      # Only download /usr/ports/graphics but not other ports; https://stackoverflow.com/a/52269934/2988
+      - git clone --depth 1 --filter=blob:none --sparse https://git.FreeBSD.org/ports.git /usr/ports
+      - ( cd /usr/ports ; git sparse-checkout set graphics ; cd - )
       - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
       - pkg install -y graphics/gpu-firmware-kmod
     build_package_script:
