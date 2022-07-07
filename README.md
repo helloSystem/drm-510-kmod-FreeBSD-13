@@ -10,4 +10,4 @@ This is why we need to build `graphics/drm-510-kmod` ourselves if we don't want 
 
 ## Approach
 
-We build just the one package we are interested in using Cirrus CI by downloading only the sections of the FreeBSD Ports tree that we really need.
+We build just the one package we are interested in using Cirrus CI in under 3 minutes by downloading only the sections of the FreeBSD Ports tree that we really need using git. Then we use the resulting pkg [here](https://github.com/helloSystem/ISO/commit/7159860e012133d6c80baa38ca2762ceb1c1f1d5).
