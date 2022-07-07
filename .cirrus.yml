@@ -14,4 +14,4 @@ task:
     build_package_script:
       - cd /usr/ports ; env BATCH=1 make -C graphics/drm-510-kmod package
     binary_artifacts:
-      path: "/usr/ports/graphics/drm-510-kmod/work/pkg/*"
+      path: "../../usr/ports/graphics/drm-510-kmod/work/pkg/*"
