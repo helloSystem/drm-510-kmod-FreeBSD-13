@@ -1,7 +1,7 @@
 task:
     freebsd_instance:
       matrix:
-        - image: freebsd-132-1-release-amd64
+        - image: freebsd-13-1-release-amd64
 
     timeout_in: 90m
     prerequisites_script:
