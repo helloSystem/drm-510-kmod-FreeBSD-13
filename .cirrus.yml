@@ -14,7 +14,7 @@ task:
       # Only download /usr/ports/graphics but not other ports; https://stackoverflow.com/a/52269934/2988
       - rm -rf /usr/ports
       - git clone --depth 1 --filter=blob:none --sparse https://github.com/freebsd/freebsd-ports.git /usr/ports
-      - ( cd /usr/ports ; git sparse-checkout set Mk Templates graphics ; cd - )
+      - ( cd /usr/ports ; git sparse-checkout set GIDs Keywords Mk Templates Tools graphics ; cd - )
     build_package_script:
       - cd /usr/ports ; env BATCH=1 make -C graphics/drm-510-kmod package
     binary_artifacts:
