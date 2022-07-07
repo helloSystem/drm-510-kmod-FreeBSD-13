@@ -8,12 +8,12 @@ task:
 
     timeout_in: 90m
     prerequisites_script:
+      - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
       - pkg install -y devel/git-lite graphics/gpu-firmware-kmod
       # portsnap  --interactive fetch && portsnap extract
       # Only download /usr/ports/graphics but not other ports; https://stackoverflow.com/a/52269934/2988
       - git clone --depth 1 --filter=blob:none --sparse https://git.FreeBSD.org/ports.git /usr/ports
       - ( cd /usr/ports ; git sparse-checkout set graphics ; cd - )
-      - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
     build_package_script:
       - cd /usr/ports ; env BATCH=1 make -C graphics/drm-510-kmod package
     binary_artifacts:
