@@ -1,5 +1,7 @@
 # drm-510-kmod-FreeBSD-13 [![Build Status](https://api.cirrus-ci.com/github/helloSystem/drm-510-kmod-FreeBSD-13.svg)](https://cirrus-ci.com/github/helloSystem/drm-510-kmod-FreeBSD-13)
 
+Upstream: https://github.com/freebsd/drm-kmod/
+
 ## Rationale
 
 As of 2022Q2, for Intel TigerLake-LP GT2 [Iris Xe Graphics] `8086:9a49:f111:0001` GPUs to get recognized and working properly, we need `graphics/drm-510-kmod` (at some time in the future, `graphics/drm-kmod` should do the right thing).
