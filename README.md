@@ -1,4 +1,4 @@
-# drm-510-kmod-FreeBSD-13 [![Build Status](https://api.cirrus-ci.com/github/helloSystem/drm-510-kmod-FreeBSD-13.svg)](https://cirrus-ci.com/github/helloSystem/drm-510-kmod-FreeBSD-13)
+# drm-510-kmod.pkg [![Build Status](https://api.cirrus-ci.com/github/helloSystem/drm-510-kmod.pkg.svg)](https://cirrus-ci.com/github/helloSystem/drm-510-kmod.pkg)
 
 Upstream: https://github.com/freebsd/drm-kmod/
 
