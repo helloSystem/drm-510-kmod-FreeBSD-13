@@ -27,3 +27,4 @@ task:
       
     binary_artifacts:
       path: "pkg/*"
+  
